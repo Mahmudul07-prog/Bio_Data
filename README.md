@@ -1,6 +1,6 @@
-# Mahmudul Hasan — Professional Biodata & Portfolio Website
+# Mahmudul Hasan (Faysal) — Professional Biodata & Portfolio Website
 
-এই রিপোজিটরিটি মাহমুদুল হাসানের একটি আধুনিক, রেসপন্সিভ এবং এক্সক্লুসিভ প্রফেশনাল বায়োডাটা ওয়েবসাইট। এটি সরাসরি **GitHub Pages (github.io)** এ হোস্ট করার জন্য সম্পূর্ণ প্রস্তুত।
+এই রিপোজিটরিটি মাহমুদুল হাসান (ফয়সাল) / Mahmudul Hasan (Faysal)-এর একটি আধুনিক, রেসপন্সিভ এবং এক্সক্লুসিভ প্রফেশনাল বায়োডাটা ওয়েবসাইট। এটি সরাসরি **GitHub Pages (github.io)** এ হোস্ট করার জন্য সম্পূর্ণ প্রস্তুত।
 
 ---
 

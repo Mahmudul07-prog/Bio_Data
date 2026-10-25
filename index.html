@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahmudul Hasan — Professional Biodata & Portfolio</title>
+  
+  <!-- Meta tags for SEO & Social Share -->
+  <meta name="description" content="Professional Biodata & Profile of Mahmudul Hasan — Software Developer at Global MediKlaud (BD) Ltd, IsDB-BISEW C#.NET Scholar, Dual Masters & Honors Graduate." />
+  <meta name="author" content="Mahmudul Hasan" />
+  <meta property="og:title" content="Mahmudul Hasan — Professional Biodata" />
+  <meta property="og:description" content="Software Developer | Global MediKlaud | IsDB-BISEW Scholar | Dual Masters Background" />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:type" content="profile" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --primary-soft: #e0f2fe;
+      --primary-gradient: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+      --accent: #0d9488;
+      --accent-soft: #ccfbf1;
+      --emerald: #10b981;
+      
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --card-border: #e2e8f0;
+      
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-sub: #475569;
+      
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 35px -4px rgba(15, 23, 42, 0.12);
+      
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --primary: #38bdf8;
+      --primary-hover: #0ea5e9;
+      --primary-soft: rgba(56, 189, 248, 0.12);
+      --primary-gradient: linear-gradient(135deg, #0284c7 0%, #14b8a6 100%);
+      --accent: #2dd4bf;
+      --accent-soft: rgba(45, 212, 191, 0.12);
+      
+      --bg: #0b1120;
+      --surface: #131c31;
+      --surface-alt: #1a2540;
+      --card-border: #1e293b;
+      
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #cbd5e1;
+      
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow-md: 0 8px 25px -4px rgba(0,0,0,0.5);
+      --shadow-lg: 0 16px 40px -4px rgba(0,0,0,0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      min-height: 100vh;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding-bottom: 70px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Ambient background gradient */
+    .bg-glow {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1200px;
+      height: 480px;
+      background: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.14) 0%, rgba(13, 148, 136, 0.04) 60%, transparent 80%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header Nav */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0 16px;
+    }
+
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .brand-pill i {
+      color: var(--accent);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-action {
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 9px 16px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .btn-action:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-action.btn-primary {
+      background: var(--primary-gradient);
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-action.btn-primary:hover {
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+      color: #ffffff;
+    }
+
+    .theme-toggle-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--card-border);
+      background: var(--surface);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .theme-toggle-btn:hover {
+      transform: rotate(15deg);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Hero Section Card */
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      margin-top: 10px;
+      margin-bottom: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--primary-gradient);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-avatar-box {
+      position: relative;
+      text-align: center;
+    }
+
+    .hero-avatar {
+      width: 220px;
+      height: 260px;
+      border-radius: 20px;
+      object-fit: cover;
+      object-position: center top;
+      border: 4px solid var(--surface);
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .hero-avatar:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .badge-verified {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #059669;
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(5, 150, 105, 0.35);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #0d9488;
+      background: var(--accent-soft);
+      padding: 4px 12px;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .hero-role {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .hero-role .company {
+      color: var(--text-muted);
+      font-weight: 400;
+      font-size: 1.05rem;
+    }
+
+    .hero-bio {
+      color: var(--text-sub);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      max-width: 680px;
+    }
+
+    .hero-contact-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .contact-chip {
+      background: var(--surface-alt);
+      border: 1px solid var(--card-border);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .contact-chip:hover {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .contact-chip i {
+      color: var(--primary);
+    }
+
+    .copy-btn-tiny {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-left: 4px;
+      transition: var(--transition);
+    }
+
+    .contact-chip:hover .copy-btn-tiny {
+      color: var(--primary);
+    }
+
+    /* Key Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .highlight-card {
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: var(--transition);
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+
+    .hl-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .hl-blue { background: rgba(2, 132, 199, 0.12); color: #0284c7; }
+    .hl-emerald { background: rgba(16, 185, 129, 0.12); color: #10b981; }
+    .hl-purple { background: rgba(139, 92, 246, 0.12); color: #8b5cf6; }
+    .hl-amber { background: rgba(245, 158, 11, 0.12); color: #f59e0b; }
+
+    .hl-info h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .hl-info p {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    /* Tabs Navigation */
+    .section-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+      scrollbar-width: none;
+    }
+
+    .section-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-tab {
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      color: var(--text-sub);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: var(--transition);
+    }
+
+    .nav-tab:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .nav-tab.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    }
+
+    /* Content Layout */
+    .tab-content-panel {
+      display: none;
+      animation: fadeIn 0.35s ease forwards;
+    }
+
+    .tab-content-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards & Sections */
+    .card-panel {
+      background: var(--surface);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .panel-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .panel-title i {
+      color: var(--primary);
+    }
+
+    .panel-badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    /* Experience & Training Cards */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 6px;
+      bottom: 10px;
+      width: 2px;
+      background: var(--card-border);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 3px solid var(--primary);
+      z-index: 1;
+    }
+
+    .timeline-item.featured::before {
+      background: #10b981;
+      border-color: #10b981;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+    }
+
+    .exp-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .exp-role {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .exp-duration {
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: var(--surface-alt);
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: var(--text-sub);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .exp-org {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .exp-desc {
+      color: var(--text-sub);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-tag {
+      font-size: 0.78rem;
+      background: var(--surface-alt);
+      border: 1px solid var(--card-border);
+      padding: 3px 10px;
+      border-radius: 6px;
+      color: var(--text-sub);
+      font-weight: 500;
+    }
+
+    /* Education Table / Grid */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 16px;
+    }
+
+    .edu-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      position: relative;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .edu-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .edu-card.special {
+      background: linear-gradient(to bottom right, var(--surface-alt), rgba(2, 132, 199, 0.05));
+      border-left: 4px solid var(--primary);
+    }
+
+    .edu-card.islamic {
+      border-left: 4px solid #10b981;
+    }
+
+    .edu-level {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .edu-degree {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      line-height: 1.35;
+    }
+
+    .edu-institute {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .edu-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
+      border-top: 1px dashed var(--card-border);
+      font-size: 0.84rem;
+    }
+
+    .edu-year {
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .edu-result {
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+    }
+
+    .res-high {
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
+    }
+
+    .res-progress {
+      background: rgba(2, 132, 199, 0.15);
+      color: var(--primary);
+    }
+
+    .res-regular {
+      background: var(--surface);
+      color: var(--text-sub);
+      border: 1px solid var(--card-border);
+    }
+
+    /* Personal Information Details */
+    .info-list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background: var(--surface-alt);
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      gap: 14px;
+      transition: var(--transition);
+    }
+
+    .info-row:hover {
+      border-color: var(--primary);
+    }
+
+    .info-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .info-val {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Family Cards */
+    .family-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .family-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      transition: var(--transition);
+    }
+
+    .family-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .fam-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .fam-details h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .fam-details h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .fam-details p {
+      font-size: 0.88rem;
+      color: var(--text-sub);
+      line-height: 1.4;
+    }
+
+    /* Address Cards */
+    .address-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .address-box {
+      background: var(--surface-alt);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      position: relative;
+    }
+
+    .address-box h4 {
+      font-size: 0.88rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .address-box p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /* Verification Badge Banner */
+    .nid-banner {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(13, 148, 136, 0.08) 100%);
+      border: 1px dashed var(--primary);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .nid-text {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: var(--text-main);
+    }
+
+    .nid-text i {
+      font-size: 1.35rem;
+      color: var(--primary);
+    }
+
+    .nid-num {
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      background: var(--surface);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+    }
+
+    /* Floating Quick Bar for Mobile / Desktop */
+    .floating-actions {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      z-index: 100;
+    }
+
+    .fab-btn {
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .fab-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #38bdf8;
+    }
+
+    .fab-btn.fab-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+    }
+
+    .fab-btn.fab-whatsapp:hover {
+      background: #20bd5a;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transform: translateY(-50px);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+      z-index: 999;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast i {
+      color: #10b981;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
+
+    footer a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 860px) {
+      .hero-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 24px;
+      }
+      .hero-avatar-box {
+        margin: 0 auto;
+      }
+      .hero-avatar {
+        width: 190px;
+        height: 220px;
+      }
+      .status-tag {
+        margin: 0 auto;
+      }
+      .hero-role {
+        justify-content: center;
+      }
+      .hero-contact-chips {
+        justify-content: center;
+      }
+      .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .info-list-grid, .address-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-card {
+        padding: 24px 18px;
+      }
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+      .floating-actions .fab-text {
+        display: none;
+      }
+      .floating-actions {
+        padding: 6px 12px;
+        gap: 6px;
+      }
+      .fab-btn {
+        padding: 8px 10px;
+      }
+    }
+
+    /* Print Layout Configuration for Exactly 1-Page A4 Output */
+    @page {
+      size: A4 portrait;
+      margin: 8mm 10mm;
+    }
+
+    .print-biodata-1page {
+      display: none;
+    }
+
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        font-family: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif !important;
+        font-size: 8pt !important;
+        line-height: 1.28 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      /* Hide ALL on-screen components on print */
+      .bg-glow, .screen-only, .top-bar, .section-nav, .floating-actions, .toast, footer, #toast {
+        display: none !important;
+      }
+
+      /* Show strictly the 1-page A4 print layout */
+      .print-biodata-1page {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+      }
+
+      .p-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #0284c7;
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+      }
+
+      .p-name {
+        font-size: 16pt;
+        font-weight: 800;
+        color: #0f172a;
+        line-height: 1.1;
+      }
+
+      .p-subtitle {
+        font-size: 8.5pt;
+        font-weight: 700;
+        color: #0284c7;
+        margin-top: 2px;
+      }
+
+      .p-scholar {
+        font-size: 7.5pt;
+        color: #475569;
+        margin-top: 1px;
+      }
+
+      .p-contacts {
+        font-size: 7.5pt;
+        color: #334155;
+        margin-top: 3px;
+        line-height: 1.35;
+      }
+
+      .p-photo {
+        width: 72px;
+        height: 84px;
+        object-fit: cover;
+        border-radius: 6px;
+        border: 1px solid #94a3b8;
+      }
+
+      .p-grid {
+        display: flex;
+        gap: 12px;
+      }
+
+      .p-col-left {
+        width: 44%;
+      }
+
+      .p-col-right {
+        width: 56%;
+      }
+
+      .p-sec-title {
+        font-size: 8pt;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        background: #f1f5f9;
+        color: #0f172a;
+        border-left: 3px solid #0284c7;
+        padding: 2px 6px;
+        margin-top: 6px;
+        margin-bottom: 4px;
+      }
+
+      .p-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 7.5pt;
+      }
+
+      .p-table td {
+        padding: 2.2px 4px;
+        vertical-align: top;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .p-label {
+        font-weight: 700;
+        color: #475569;
+        width: 38%;
+        white-space: nowrap;
+      }
+
+      .p-val {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .p-edu-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 7.2pt;
+        margin-top: 2px;
+      }
+
+      .p-edu-table th {
+        background: #0f172a;
+        color: #ffffff;
+        font-weight: 700;
+        padding: 3px 4px;
+        text-align: left;
+        border: 1px solid #0f172a;
+      }
+
+      .p-edu-table td {
+        padding: 2.5px 4px;
+        border: 1px solid #e2e8f0;
+        vertical-align: top;
+      }
+
+      .p-edu-table tr:nth-child(even) td {
+        background: #f8fafc;
+      }
+
+      .p-exp-item {
+        margin-bottom: 6px;
+      }
+
+      .p-exp-role {
+        font-size: 8pt;
+        font-weight: 700;
+        color: #0f172a;
+      }
+
+      .p-exp-org {
+        font-size: 7.5pt;
+        font-weight: 600;
+        color: #0284c7;
+      }
+
+      .p-exp-desc {
+        font-size: 7.2pt;
+        color: #334155;
+        line-height: 1.3;
+        margin-top: 1px;
+      }
+
+      .p-tag {
+        display: inline-block;
+        font-size: 6.5pt;
+        background: #e2e8f0;
+        padding: 1px 4px;
+        border-radius: 3px;
+        margin-right: 2px;
+        margin-top: 2px;
+        font-weight: 600;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Ambient Glow -->
+  <div class="bg-glow"></div>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Top Navigation Bar -->
+    <header class="top-bar">
+      <div class="brand-pill">
+        <i class="fa-solid fa-file-circle-check"></i>
+        <span>Official Biodata & Profile</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-action btn-primary" onclick="window.print()" title="Print or Save as PDF (Single Page A4)">
+          <i class="fa-solid fa-print"></i>
+          <span>Print / PDF (1-Page)</span>
+        </button>
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme" title="Switch Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Screen Content Wrapper -->
+    <div class="screen-only">
+
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-layout">
+        
+        <!-- Profile Picture Box -->
+        <div class="hero-avatar-box">
+          <img src="assets/profile.jpg" alt="Mahmudul Hasan" class="hero-avatar" />
+          <div class="badge-verified">
+            <i class="fa-solid fa-shield-halved"></i> Verified Profile
+          </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <div class="status-tag">
+            <span class="status-dot"></span>
+            <span>Currently Active: Software Developer</span>
+          </div>
+
+          <h1 class="hero-title">Mahmudul Hasan</h1>
+
+          <div class="hero-role">
+            <span>Software Developer</span>
+            <span class="company">• Global MediKlaud (BD) Ltd</span>
+          </div>
+
+          <p class="hero-bio">
+            Passionate software engineer specializing in <strong>Enterprise Hospital ERP Systems</strong> and C#.NET architecture. Fully funded <strong>IsDB-BISEW IT Scholar</strong> with an exceptional academic duality in <strong>Master of Social Work (Victoria Govt College)</strong> and <strong>MA in Hadith (CGPA 4.15)</strong>.
+          </p>
+
+          <!-- Contact Chips -->
+          <div class="hero-contact-chips">
+            <div class="contact-chip" onclick="copyText('+8801863846300', 'Phone Number Copied!')" title="Click to copy">
+              <i class="fa-solid fa-phone"></i>
+              <span>+8801863846300</span>
+              <i class="fa-regular fa-copy copy-btn-tiny"></i>
+            </div>
+
+            <div class="contact-chip" onclick="copyText('mahmudulhasa27@gmail.com', 'Email Address Copied!')" title="Click to copy">
+              <i class="fa-solid fa-envelope"></i>
+              <span>mahmudulhasa27@gmail.com</span>
+              <i class="fa-regular fa-copy copy-btn-tiny"></i>
+            </div>
+
+            <div class="contact-chip" onclick="window.open('https://www.linkedin.com/in/mahmudul-hasan-80259b374/', '_blank')">
+              <i class="fa-brands fa-linkedin"></i>
+              <span>LinkedIn</span>
+              <i class="fa-solid fa-arrow-up-right-from-square copy-btn-tiny"></i>
+            </div>
+
+            <div class="contact-chip" onclick="window.open('https://mahmudul07-prog.github.io/My-Portfolio/', '_blank')">
+              <i class="fa-solid fa-globe"></i>
+              <span>Live Portfolio</span>
+              <i class="fa-solid fa-arrow-up-right-from-square copy-btn-tiny"></i>
+            </div>
+
+            <div class="contact-chip">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>West-Agargaon, Dhaka</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Key Highlights / Badges Row -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="hl-icon hl-blue">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <div class="hl-info">
+          <h4>Industry Role</h4>
+          <p>Software Developer (Hospital ERP)</p>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="hl-icon hl-emerald">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <div class="hl-info">
+          <h4>Scholarship</h4>
+          <p>IsDB-BISEW Certified (788 Hrs C#.NET)</p>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="hl-icon hl-purple">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="hl-info">
+          <h4>Dual Masters</h4>
+          <p>MSW (Victoria Govt) &amp; MA Hadith (4.15)</p>
+        </div>
+      </div>
+
+      <div class="highlight-card">
+        <div class="hl-icon hl-amber">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div class="hl-info">
+          <h4>Family Roots</h4>
+          <p>Father: Retd. Head Teacher</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section Navigation Tabs -->
+    <nav class="section-nav" id="tabNav">
+      <button class="nav-tab active" data-tab="all">
+        <i class="fa-solid fa-layer-group"></i> All Sections
+      </button>
+      <button class="nav-tab" data-tab="career">
+        <i class="fa-solid fa-briefcase"></i> Experience &amp; Training
+      </button>
+      <button class="nav-tab" data-tab="education">
+        <i class="fa-solid fa-book-open"></i> Education
+      </button>
+      <button class="nav-tab" data-tab="personal">
+        <i class="fa-solid fa-id-card"></i> Personal Details
+      </button>
+      <button class="nav-tab" data-tab="family">
+        <i class="fa-solid fa-people-roof"></i> Family Background
+      </button>
+      <button class="nav-tab" data-tab="address">
+        <i class="fa-solid fa-map-location-dot"></i> Address &amp; Contact
+      </button>
+    </nav>
+
+    <!-- ================= TAB: CAREER & TRAINING ================= -->
+    <section class="tab-content-panel active" id="sec-career">
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Professional Experience &amp; IT Training</span>
+          </div>
+          <span class="panel-badge">Career Track</span>
+        </div>
+
+        <div class="timeline">
+          <!-- Current Employment -->
+          <div class="timeline-item featured">
+            <div class="exp-title-row">
+              <h3 class="exp-role">Software Developer</h3>
+              <span class="exp-duration">
+                <i class="fa-regular fa-calendar"></i> December 2025 – Present
+              </span>
+            </div>
+            <div class="exp-org">
+              <i class="fa-solid fa-building"></i> Global MediKlaud (BD) Limited
+            </div>
+            <p class="exp-desc">
+              Currently actively driving core development for large-scale enterprise <strong>Hospital ERP Solutions</strong> for the <strong>Dhaka Chamber of Commerce &amp; Industry (DCCI)</strong>. Specializing in robust backend business logic, clinical workflow automation, scalable database schemas, and modern web APIs.
+            </p>
+            <div class="tech-badges">
+              <span class="tech-tag">Hospital ERP</span>
+              <span class="tech-tag">C# / ASP.NET</span>
+              <span class="tech-tag">Enterprise Architecture</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">DCCI Project</span>
+            </div>
+          </div>
+
+          <!-- IsDB-BISEW Training -->
+          <div class="timeline-item">
+            <div class="exp-title-row">
+              <h3 class="exp-role">Enterprise System Analysis &amp; Design — C#.NET (ESAD-CS)</h3>
+              <span class="exp-duration">
+                <i class="fa-regular fa-clock"></i> Oct 2024 – Aug 2025 (8.5 Mos / 788 Hrs)
+              </span>
+            </div>
+            <div class="exp-org">
+              <i class="fa-solid fa-certificate"></i> IsDB-BISEW IT Scholarship Project (Islamic Development Bank)
+            </div>
+            <p class="exp-desc">
+              Awarded the prestigious, highly competitive <strong>Islamic Development Bank (IsDB-BISEW)</strong> full IT scholarship. Completed <strong>788 hours</strong> of rigorous, hands-on enterprise software engineering at <strong>PeopleNTech</strong>, Panthapath/Green Road, Dhaka.
+            </p>
+            <div class="tech-badges">
+              <span class="tech-tag">C#.NET</span>
+              <span class="tech-tag">ASP.NET Core MVC / Web API</span>
+              <span class="tech-tag">Entity Framework Core</span>
+              <span class="tech-tag">MS SQL Server</span>
+              <span class="tech-tag">OOP &amp; Design Patterns</span>
+              <span class="tech-tag">Crystal Reports / ADO.NET</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB: EDUCATION ================= -->
+    <section class="tab-content-panel active" id="sec-education">
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Educational Qualifications</span>
+          </div>
+          <span class="panel-badge">Dual-Track Academic Excellence</span>
+        </div>
+
+        <div class="edu-grid">
+          
+          <!-- MSW -->
+          <div class="edu-card special">
+            <div>
+              <div class="edu-level">Post-Graduate (Master's)</div>
+              <h3 class="edu-degree">Master of Social Work (MSW)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-landmark"></i>
+                <span>Cumilla Victoria Government College</span>
+              </div>
+            </div>
+            <div class="edu-footer">
+              <span class="edu-year"><i class="fa-regular fa-calendar-check"></i> Ongoing</span>
+              <span class="edu-result res-progress">In Progress</span>
+            </div>
+          </div>
+
+          <!-- MA in Hadith -->
+          <div class="edu-card islamic">
+            <div>
+              <div class="edu-level">Higher Islamic Studies (Master's)</div>
+              <h3 class="edu-degree">MA in Hadith (Kamil)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-mosque"></i>
+                <span>Daulat Ganj Gazimura Kamil Madrasah, Cumilla</span>
+              </div>
+            </div>
+            <div class="edu-footer">
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2022 (2-Year Program)</span>
+              <span class="edu-result res-high"><i class="fa-solid fa-star"></i> CGPA 4.15</span>
+            </div>
+          </div>
+
+          <!-- B.S.S (Hons) -->
+          <div class="edu-card special">
+            <div>
+              <div class="edu-level">Undergraduate (Honors)</div>
+              <h3 class="edu-degree">B.S.S. (Hons) in Social Work</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-building-columns"></i>
+                <span>Viku Memorial Government College, Manikganj</span>
+              </div>
+            </div>
+            <div class="edu-footer">
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2023 (4-Year Program)</span>
+              <span class="edu-result res-regular">CGPA 2.55</span>
+            </div>
+          </div>
+
+          <!-- BA Islamic Studies -->
+          <div class="edu-card islamic">
+            <div>
+              <div class="edu-level">Undergraduate Degree (Fazil)</div>
+              <h3 class="edu-degree">BA in Islamic Studies</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-school"></i>
+                <span>Aush-Para Fazil Madrasah</span>
+              </div>
+            </div>
+            <div class="edu-footer">
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2020 (3-Year Program)</span>
+              <span class="edu-result res-regular">CGPA 2.58</span>
+            </div>
+          </div>
+
+          <!-- Alim -->
+          <div class="edu-card">
+            <div>
+              <div class="edu-level">Higher Secondary Equivalent</div>
+              <h3 class="edu-degree">Alim (HSC Equivalent)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-school"></i>
+                <span>Aush-Para Fazil Madrasah</span>
+              </div>
+            </div>
+            <div class="edu-footer">
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2017</span>
+              <span class="edu-result res-regular">GPA 3.29</span>
+            </div>
+          </div>
+
+          <!-- Dakhil -->
+          <div class="edu-card">
+            <div>
+              <div class="edu-level">Secondary Equivalent</div>
+              <h3 class="edu-degree">Dakhil (SSC Equivalent)</h3>
+              <div class="edu-institute">
+                <i class="fa-solid fa-school"></i>
+                <span>Aush-Para Fazil Madrasah</span>
+              </div>
+            </div>
+            <div class="edu-footer">
+              <span class="edu-year"><i class="fa-regular fa-calendar"></i> 2015</span>
+              <span class="edu-result res-high"><i class="fa-solid fa-check"></i> GPA 4.44</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB: PERSONAL DETAILS ================= -->
+    <section class="tab-content-panel active" id="sec-personal">
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fa-solid fa-id-card"></i>
+            <span>Personal Information &amp; Attributes</span>
+          </div>
+          <span class="panel-badge">Demographics</span>
+        </div>
+
+        <div class="info-list-grid">
+          
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Full Name</span>
+              <span class="info-val">Mahmudul Hasan</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-cake-candles"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Date of Birth &amp; Age</span>
+              <span class="info-val">January 1, 1999 <span id="ageBadge" style="font-size:0.82rem; color:var(--primary); font-weight:600;">(27 Years)</span></span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-ruler-vertical"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Height</span>
+              <span class="info-val">5' 8" (Feet &amp; Inches)</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-weight-scale"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Weight</span>
+              <span class="info-val">78 kg</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon" style="color: #ef4444;"><i class="fa-solid fa-droplet"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Blood Group</span>
+              <span class="info-val" style="color: #ef4444;">A+ (Positive)</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-ring"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Marital Status</span>
+              <span class="info-val">Single / Unmarried</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-moon"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Religion</span>
+              <span class="info-val">Islam (Sunni)</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-flag"></i></div>
+            <div class="info-meta">
+              <span class="info-label">Nationality</span>
+              <span class="info-val">Bangladeshi (By Birth)</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Official NID Verification Banner -->
+        <div class="nid-banner">
+          <div class="nid-text">
+            <i class="fa-solid fa-id-badge"></i>
+            <div>
+              <strong>National Identity (NID) Number</strong>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Verified Citizen Identification</div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span class="nid-num">6457544531</span>
+            <button class="btn-action" style="padding: 6px 12px; font-size: 0.8rem;" onclick="copyText('6457544531', 'NID Copied!')" title="Copy NID">
+              <i class="fa-regular fa-copy"></i> Copy
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= TAB: FAMILY DETAILS ================= -->
+    <section class="tab-content-panel active" id="sec-family">
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fa-solid fa-people-roof"></i>
+            <span>Family Background</span>
+          </div>
+          <span class="panel-badge">Respected &amp; Educated Lineage</span>
+        </div>
+
+        <div class="family-grid">
+          
+          <!-- Father -->
+          <div class="family-card">
+            <div class="fam-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="fam-details">
+              <h4>Father</h4>
+              <h3>Khaja MD. Amimul Ahsan</h3>
+              <p>Retired Head Teacher, Aush-Para Fazil Madrasah. Respected educator and community leader.</p>
+            </div>
+          </div>
+
+          <!-- Mother -->
+          <div class="family-card">
+            <div class="fam-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="fam-details">
+              <h4>Mother</h4>
+              <h3>Kohinoor Begum</h3>
+              <p>Homemaker, dedicates life to the education and moral upbringing of the family.</p>
+            </div>
+          </div>
+
+          <!-- Elder Brother -->
+          <div class="family-card">
+            <div class="fam-icon"><i class="fa-solid fa-user-gear"></i></div>
+            <div class="fam-details">
+              <h4>Elder Brother</h4>
+              <h3>Robiul Hossain Forhard</h3>
+              <p>Assistant Manager, Telco Ltd. (Happily Married).</p>
+            </div>
+          </div>
+
+          <!-- Elder Sister -->
+          <div class="family-card">
+            <div class="fam-icon"><i class="fa-solid fa-person-dress"></i></div>
+            <div class="fam-details">
+              <h4>Elder Sister</h4>
+              <h3>Salma Sultana Maya</h3>
+              <p>Homemaker.</p>
+            </div>
+          </div>
+
+          <!-- Brother-in-law -->
+          <div class="family-card">
+            <div class="fam-icon"><i class="fa-solid fa-building-user"></i></div>
+            <div class="fam-details">
+              <h4>Brother-in-law</h4>
+              <h3>Robiul Hassan</h3>
+              <p>Manager, SQ Cable Company.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TAB: ADDRESS & CONTACT ================= -->
+    <section class="tab-content-panel active" id="sec-address">
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <span>Address &amp; Direct Communication</span>
+          </div>
+          <span class="panel-badge">Dhaka &amp; Cumilla</span>
+        </div>
+
+        <div class="address-grid">
+          
+          <!-- Present Address -->
+          <div class="address-box">
+            <h4><i class="fa-solid fa-house-chimney-user"></i> Present Address (Dhaka)</h4>
+            <p>272/6 Panir Tanki, West-Agargaon, Dhaka-1207, Bangladesh</p>
+            <div style="margin-top: 12px;">
+              <button class="btn-action" style="padding: 6px 12px; font-size: 0.8rem;" onclick="copyText('272/6 Panir Tanki, West-Agargaon, Dhaka-1207', 'Present Address Copied!')">
+                <i class="fa-regular fa-copy"></i> Copy Address
+              </button>
+            </div>
+          </div>
+
+          <!-- Permanent Address -->
+          <div class="address-box">
+            <h4><i class="fa-solid fa-tree-city"></i> Permanent Address (Cumilla)</h4>
+            <p>Village: Auspara, Pirbari<br />Post: Auspara-3570, Upazila: Laksam, District: Cumilla, Bangladesh</p>
+            <div style="margin-top: 12px;">
+              <button class="btn-action" style="padding: 6px 12px; font-size: 0.8rem;" onclick="copyText('Village: Auspara, Pirbari, Post: Auspara-3570, Upazila: Laksam, District: Cumilla', 'Permanent Address Copied!')">
+                <i class="fa-regular fa-copy"></i> Copy Address
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Direct Connect Links Card -->
+        <div style="margin-top: 20px; padding: 18px; background: var(--surface-alt); border-radius: 12px; border: 1px solid var(--card-border); display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between;">
+          <div>
+            <strong style="color: var(--text-main); font-size: 0.95rem;">Connect Directly with Mahmudul</strong>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 2px;">Feel free to reach out via WhatsApp, direct phone call, or email.</p>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="tel:+8801863846300" class="btn-action">
+              <i class="fa-solid fa-phone" style="color: #0284c7;"></i>
+              <span>Call Now</span>
+            </a>
+            <a href="https://wa.me/8801863846300?text=Assalamu%20Alaikum%20Mahmudul" target="_blank" class="btn-action btn-primary" style="background: #25D366;">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="mailto:mahmudulhasa27@gmail.com" class="btn-action">
+              <i class="fa-solid fa-envelope" style="color: #ea4335;"></i>
+              <span>Email</span>
+            </a>
+            <a href="https://mahmudul07-prog.github.io/My-Portfolio/" target="_blank" class="btn-action">
+              <i class="fa-solid fa-globe"></i>
+              <span>Portfolio</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Mahmudul Hasan — All Rights Reserved.</p>
+      <p style="margin-top: 6px;">
+        Designed for professional presentation &amp; online verification • Hosted on GitHub Pages
+      </p>
+    </footer>
+
+    </div><!-- End .screen-only -->
+
+    <!-- ================= DEDICATED 1-PAGE A4 PRINT LAYOUT ================= -->
+    <div class="print-biodata-1page">
+      
+      <!-- Print Header -->
+      <div class="p-header">
+        <div style="flex: 1; padding-right: 14px;">
+          <div style="font-size: 8pt; font-weight: 800; color: #0284c7; letter-spacing: 0.08em; text-transform: uppercase;">BIODATA &amp; PROFESSIONAL PROFILE</div>
+          <div class="p-name">MAHMUDUL HASAN</div>
+          <div class="p-subtitle">Software Developer • Global MediKlaud (BD) Ltd (Hospital ERP - DCCI)</div>
+          <div class="p-scholar">IsDB-BISEW IT Scholarship Graduate • Enterprise System Analysis &amp; Design (C#.NET)</div>
+          
+          <div class="p-contacts">
+            <strong>Phone:</strong> +8801863846300 &nbsp;|&nbsp; 
+            <strong>Email:</strong> mahmudulhasa27@gmail.com &nbsp;|&nbsp; 
+            <strong>Portfolio:</strong> mahmudul07-prog.github.io/My-Portfolio/
+            <br />
+            <strong>Present:</strong> 272/6 Panir Tanki, West-Agargaon, Dhaka-1207 &nbsp;|&nbsp; 
+            <strong>Permanent:</strong> Auspara, Laksam, Cumilla
+          </div>
+        </div>
+        <div>
+          <img src="assets/profile.jpg" alt="Mahmudul Hasan" class="p-photo" />
+        </div>
+      </div>
+
+      <!-- 2-Column Body Layout -->
+      <div class="p-grid">
+        
+        <!-- Left Column: Personal, Family & Contacts -->
+        <div class="p-col-left">
+          
+          <!-- Personal Details -->
+          <div class="p-sec-title">Personal Details</div>
+          <table class="p-table">
+            <tr><td class="p-label">Full Name</td><td class="p-val">Mahmudul Hasan</td></tr>
+            <tr><td class="p-label">Date of Birth</td><td class="p-val">Jan 01, 1999 (27 Yrs)</td></tr>
+            <tr><td class="p-label">Height / Weight</td><td class="p-val">5' 8" &nbsp;|&nbsp; 78 kg</td></tr>
+            <tr><td class="p-label">Blood Group</td><td class="p-val" style="color: #dc2626;">A+ (Positive)</td></tr>
+            <tr><td class="p-label">Marital Status</td><td class="p-val">Single / Unmarried</td></tr>
+            <tr><td class="p-label">Religion</td><td class="p-val">Islam (Sunni)</td></tr>
+            <tr><td class="p-label">Nationality</td><td class="p-val">Bangladeshi (By Birth)</td></tr>
+            <tr><td class="p-label">National ID (NID)</td><td class="p-val" style="font-family: monospace;">6457544531</td></tr>
+          </table>
+
+          <!-- Family Details -->
+          <div class="p-sec-title">Family Background</div>
+          <table class="p-table">
+            <tr>
+              <td class="p-label">Father</td>
+              <td class="p-val"><strong>Khaja MD. Amimul Ahsan</strong><br /><span style="font-size: 6.8pt; color:#475569;">Retd. Head Teacher, Aush-Para Fazil Madrasah</span></td>
+            </tr>
+            <tr>
+              <td class="p-label">Mother</td>
+              <td class="p-val"><strong>Kohinoor Begum</strong><br /><span style="font-size: 6.8pt; color:#475569;">Homemaker</span></td>
+            </tr>
+            <tr>
+              <td class="p-label">Elder Brother</td>
+              <td class="p-val"><strong>Robiul Hossain Forhard</strong><br /><span style="font-size: 6.8pt; color:#475569;">Asst. Manager, Telco Ltd. (Married)</span></td>
+            </tr>
+            <tr>
+              <td class="p-label">Elder Sister</td>
+              <td class="p-val"><strong>Salma Sultana Maya</strong><br /><span style="font-size: 6.8pt; color:#475569;">Homemaker</span></td>
+            </tr>
+            <tr>
+              <td class="p-label">Brother-in-law</td>
+              <td class="p-val"><strong>Robiul Hassan</strong><br /><span style="font-size: 6.8pt; color:#475569;">Manager, SQ Cable Company</span></td>
+            </tr>
+          </table>
+
+          <!-- Address Info -->
+          <div class="p-sec-title">Addresses &amp; Contact</div>
+          <table class="p-table">
+            <tr>
+              <td class="p-label">Present</td>
+              <td class="p-val">272/6 Panir Tanki, West-Agargaon, Dhaka-1207</td>
+            </tr>
+            <tr>
+              <td class="p-label">Permanent</td>
+              <td class="p-val">Vill: Auspara, Pirbari, Post: Auspara-3570, Upazila: Laksam, Dist: Cumilla</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <!-- Right Column: Career, Training & Education -->
+        <div class="p-col-right">
+          
+          <!-- Experience -->
+          <div class="p-sec-title">Professional Experience</div>
+          <div class="p-exp-item">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="p-exp-role">Software Developer</span>
+              <span style="font-size: 7pt; font-weight: 700; color: #475569;">Dec 2025 – Present</span>
+            </div>
+            <div class="p-exp-org">Global MediKlaud (BD) Limited</div>
+            <div class="p-exp-desc">
+              Core developer for enterprise <strong>Hospital ERP</strong> (Dhaka Chamber of Commerce &amp; Industry - DCCI). Engineered clinical modules, transactional workflows, and REST APIs.
+            </div>
+            <div>
+              <span class="p-tag">Hospital ERP</span>
+              <span class="p-tag">C# / ASP.NET</span>
+              <span class="p-tag">SQL Server</span>
+              <span class="p-tag">DCCI Project</span>
+            </div>
+          </div>
+
+          <!-- Training -->
+          <div class="p-sec-title">Professional Diploma &amp; Training</div>
+          <div class="p-exp-item">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <span class="p-exp-role">Enterprise System Analysis &amp; Design – C#.NET</span>
+              <span style="font-size: 7pt; font-weight: 700; color: #475569;">Oct 2024 – Aug 2025</span>
+            </div>
+            <div class="p-exp-org">IsDB-BISEW IT Scholarship • PeopleNTech (788 Hours)</div>
+            <div class="p-exp-desc">
+              Awarded full Islamic Development Bank scholarship. 8.5 months hands-on training in C#, ASP.NET Core MVC, Web API, EF Core, OOP &amp; SQL Server.
+            </div>
+            <div>
+              <span class="p-tag">C#.NET</span>
+              <span class="p-tag">ASP.NET Core</span>
+              <span class="p-tag">EF Core</span>
+              <span class="p-tag">SQL Server</span>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="p-sec-title">Educational Qualifications</div>
+          <table class="p-edu-table">
+            <thead>
+              <tr>
+                <th style="width: 27%;">Degree</th>
+                <th style="width: 45%;">Institution</th>
+                <th style="width: 12%; text-align: center;">Year</th>
+                <th style="width: 16%; text-align: center;">Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>MSW</strong> (Social Work)</td>
+                <td>Cumilla Victoria Government College</td>
+                <td style="text-align: center;">Ongoing</td>
+                <td style="text-align: center; color: #0284c7; font-weight: 700;">In Progress</td>
+              </tr>
+              <tr>
+                <td><strong>B.S.S. (Hons)</strong></td>
+                <td>Viku Memorial সরকারি কলেজ, মানিকগঞ্জ</td>
+                <td style="text-align: center;">2023</td>
+                <td style="text-align: center; font-weight: 600;">CGPA 2.55</td>
+              </tr>
+              <tr>
+                <td><strong>MA in Hadith</strong></td>
+                <td>Daulat Ganj Gazimura Kamil Madrasah</td>
+                <td style="text-align: center;">2022</td>
+                <td style="text-align: center; color: #059669; font-weight: 700;">CGPA 4.15</td>
+              </tr>
+              <tr>
+                <td><strong>BA in Islamic Studies</strong></td>
+                <td>Aush-Para Fazil Madrasah</td>
+                <td style="text-align: center;">2020</td>
+                <td style="text-align: center;">CGPA 2.58</td>
+              </tr>
+              <tr>
+                <td><strong>Alim</strong> (HSC Equiv)</td>
+                <td>Aush-Para Fazil Madrasah</td>
+                <td style="text-align: center;">2017</td>
+                <td style="text-align: center;">GPA 3.29</td>
+              </tr>
+              <tr>
+                <td><strong>Dakhil</strong> (SSC Equiv)</td>
+                <td>Aush-Para Fazil Madrasah</td>
+                <td style="text-align: center;">2015</td>
+                <td style="text-align: center; font-weight: 700;">GPA 4.44</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+    </div><!-- End .print-biodata-1page -->
+
+  </div>
+
+  <!-- Floating Quick Bar (Fixed on Mobile & Desktop) -->
+  <div class="floating-actions">
+    <a href="tel:+8801863846300" class="fab-btn" title="Call Mahmudul">
+      <i class="fa-solid fa-phone"></i>
+      <span class="fab-text">Call</span>
+    </a>
+    <a href="https://wa.me/8801863846300?text=Assalamu%20Alaikum%20Mahmudul" target="_blank" class="fab-btn fab-whatsapp" title="WhatsApp Message">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="fab-text">WhatsApp</span>
+    </a>
+    <a href="mailto:mahmudulhasa27@gmail.com" class="fab-btn" title="Send Email">
+      <i class="fa-solid fa-envelope"></i>
+      <span class="fab-text">Email</span>
+    </a>
+    <button class="fab-btn" onclick="window.print()" title="Print / Download PDF (1-Page)">
+      <i class="fa-solid fa-print"></i>
+      <span class="fab-text">Print / PDF (1-Page)</span>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Copied to clipboard!</span>
+  </div>
+
+  <script>
+    // Theme Switcher Logic
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const htmlElem = document.documentElement;
+
+    function applyTheme(theme) {
+      htmlElem.setAttribute('data-theme', theme);
+      localStorage.setItem('mahmudul_theme', theme);
+      if (theme === 'dark') {
+        themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun" style="color:#f59e0b;"></i>';
+      } else {
+        themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('mahmudul_theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      const current = htmlElem.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Copy to Clipboard with Toast Notification
+    function copyText(text, msg = 'Copied to clipboard!') {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg);
+      }).catch(err => {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        showToast(msg);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // Tab Navigation Filtering
+    const tabs = document.querySelectorAll('.nav-tab');
+    const sections = {
+      career: document.getElementById('sec-career'),
+      education: document.getElementById('sec-education'),
+      personal: document.getElementById('sec-personal'),
+      family: document.getElementById('sec-family'),
+      address: document.getElementById('sec-address')
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const target = tab.getAttribute('data-tab');
+        if (target === 'all') {
+          Object.values(sections).forEach(sec => sec.classList.add('active'));
+        } else {
+          Object.entries(sections).forEach(([key, sec]) => {
+            if (key === target) {
+              sec.classList.add('active');
+              sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+              sec.classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+
+    // Dynamically calculate age from 1999-01-01
+    const birthDate = new Date('1999-01-01');
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    const ageBadge = document.getElementById('ageBadge');
+    if (ageBadge) {
+      ageBadge.innerText = `(${age} Years)`;
+    }
+  </script>
+</body>
+</html>

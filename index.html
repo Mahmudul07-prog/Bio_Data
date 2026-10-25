@@ -918,6 +918,153 @@
       border: 1px solid var(--card-border);
     }
 
+    
+    /* Photo Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: var(--surface-alt);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      aspect-ratio: 4 / 5;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      display: block;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 16px 14px;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.4) 65%, transparent 100%);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      opacity: 0.95;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(2, 132, 199, 0.9);
+      padding: 3px 8px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    .gallery-caption {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    .gallery-zoom-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #ffffff;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .gallery-item:hover .gallery-zoom-icon {
+      background: var(--primary);
+      transform: scale(1.1);
+    }
+
+    /* Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 17, 32, 0.94);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .lightbox-content {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 16px;
+      object-fit: contain;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      color: #ffffff;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.15);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .lightbox-close:hover {
+      background: var(--primary);
+      transform: rotate(90deg);
+    }
+
     /* Floating Quick Bar for Mobile / Desktop */
     .floating-actions {
       position: fixed;
@@ -1414,6 +1561,9 @@
       <button class="nav-tab" data-tab="family">
         <i class="fa-solid fa-people-roof"></i> Family Background
       </button>
+            <button class="nav-tab" data-tab="gallery">
+        <i class="fa-solid fa-images"></i> Photo Gallery
+      </button>
       <button class="nav-tab" data-tab="address">
         <i class="fa-solid fa-map-location-dot"></i> Address &amp; Contact
       </button>
@@ -1760,6 +1910,93 @@
       </div>
     </section>
 
+        <!-- ================= TAB: PHOTO GALLERY ================= -->
+    <section class="tab-content-panel active" id="sec-gallery">
+      <div class="card-panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <i class="fa-solid fa-images"></i>
+            <span>Photo Gallery • ছবি গ্যালারি</span>
+          </div>
+          <span class="panel-badge">5 Verified Photos</span>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <!-- Photo 1: Formal with Bouquet -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery-formal-bouquet.jpg', 'Formal Suit with Floral Bouquet • ফর্মাল স্যুট ও ফুলের তোড়া')">
+            <img src="assets/gallery-formal-bouquet.jpg" alt="Mahmudul Hasan - Formal Attire with Bouquet" class="gallery-img" loading="lazy" />
+            <div class="gallery-overlay">
+              <div>
+                <span class="gallery-tag">Formal &amp; Event</span>
+                <div class="gallery-caption">Formal Attire with Bouquet</div>
+              </div>
+              <div class="gallery-zoom-icon">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 2: Traditional Panjabi Portrait -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery-traditional-panjabi.jpg', 'Traditional Panjabi Portrait in Nature • ঐতিহ্যবাহী পাঞ্জাবি লুক')">
+            <img src="assets/gallery-traditional-panjabi.jpg" alt="Mahmudul Hasan - Traditional Panjabi Portrait" class="gallery-img" loading="lazy" />
+            <div class="gallery-overlay">
+              <div>
+                <span class="gallery-tag">Traditional Attire</span>
+                <div class="gallery-caption">Traditional Panjabi Portrait</div>
+              </div>
+              <div class="gallery-zoom-icon">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 3: IDB Bhaban White Panjabi & Blazer -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery-idb-blazer.jpg', 'White Panjabi & Blazer at IDB Bhaban • আইডিবি ভবন, আগারগাঁও')">
+            <img src="assets/gallery-idb-blazer.jpg" alt="Mahmudul Hasan - White Panjabi and Blazer" class="gallery-img" loading="lazy" />
+            <div class="gallery-overlay">
+              <div>
+                <span class="gallery-tag">Semi-Formal</span>
+                <div class="gallery-caption">IDB Bhaban • Panjabi &amp; Blazer</div>
+              </div>
+              <div class="gallery-zoom-icon">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 4: Travel at Garo Hills Tourism -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery-travel-mountain.jpg', 'Gaborakhali Garo Pahar Tourism Centre • গাবরাখালী গারো পাহাড় পর্যটন কেন্দ্র')">
+            <img src="assets/gallery-travel-mountain.jpg" alt="Mahmudul Hasan - Garo Pahar Tour" class="gallery-img" loading="lazy" />
+            <div class="gallery-overlay">
+              <div>
+                <span class="gallery-tag">Travel &amp; Tour</span>
+                <div class="gallery-caption">Garo Hills Tourism Centre</div>
+              </div>
+              <div class="gallery-zoom-icon">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 5: Museum Visit -->
+          <div class="gallery-item" onclick="openLightbox('assets/gallery-casual-museum.jpg', 'Historical Gallery Visit • ঐতিহাসিক মিউজিয়াম প্রদর্শনী')">
+            <img src="assets/gallery-casual-museum.jpg" alt="Mahmudul Hasan - Museum Visit" class="gallery-img" loading="lazy" />
+            <div class="gallery-overlay">
+              <div>
+                <span class="gallery-tag">Casual &amp; Lifestyle</span>
+                <div class="gallery-caption">Historical Gallery Visit</div>
+              </div>
+              <div class="gallery-zoom-icon">
+                <i class="fa-solid fa-expand"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ================= TAB: ADDRESS & CONTACT ================= -->
     <section class="tab-content-panel active" id="sec-address">
       <div class="card-panel">
@@ -2041,6 +2278,16 @@
   </div>
 
   <!-- Toast Notification Container -->
+  
+  <!-- Lightbox Modal for Photo Preview -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox(event)" aria-label="Close Preview">&times;</button>
+    <div style="text-align: center; max-width: 90vw;">
+      <img src="" alt="Enlarged Photo" class="lightbox-content" id="lightboxImg" />
+      <div id="lightboxCaption" style="color: #ffffff; font-size: 0.95rem; font-weight: 600; margin-top: 12px; text-shadow: 0 2px 4px rgba(0,0,0,0.6);"></div>
+    </div>
+  </div>
+
   <div class="toast" id="toast">
     <i class="fa-solid fa-circle-check"></i>
     <span id="toastMsg">Copied to clipboard!</span>
@@ -2100,7 +2347,8 @@
       career: document.getElementById('sec-career'),
       education: document.getElementById('sec-education'),
       personal: document.getElementById('sec-personal'),
-      family: document.getElementById('sec-family'),
+            family: document.getElementById('sec-family'),
+      gallery: document.getElementById('sec-gallery'),
       address: document.getElementById('sec-address')
     };
 
@@ -2123,6 +2371,36 @@
           });
         }
       });
+    });
+
+    
+    // Lightbox modal logic
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      img.src = src;
+      cap.innerText = caption || '';
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close') || e.target.parentElement.classList.contains('lightbox-close')) {
+        const modal = document.getElementById('lightboxModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('lightboxModal');
+        if (modal && modal.classList.contains('active')) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
     });
 
     // Dynamically calculate age from 1999-01-01
